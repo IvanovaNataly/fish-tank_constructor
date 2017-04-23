@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 20px;
+    color: #222;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+}
+
+.clearfix {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+p {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-container {
+    width: 15%;
+    height: 65vh;
+    float: left;
+    margin-top: 50px;
+}
+
+.btn {
+    width: 64%;
+    height: 27%;
+    max-width: 148px;
+    max-height: 148px;
+    display: block;
+    font-size: 120%;
+    color: #fff;
+    margin: 0 auto 24px;
+    background-color: #3c5d5d; 
+    opacity: 0.9;
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #283e3e;
+}
+
+.err-btn {
+    height: 50px;
+    margin: 50px auto 0;
+}
+
+.btn-pic {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto 5px;
+}
+
+.cat-pic {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto -10px;
+}
+
+.food-pic {
+    width: 80px;
+    height: 26px;
+}
+
+.tank-container {
+    width: 85%;
+    height: 66vh;
+    padding-top: 50px;
+    padding-right: 30px;
+    float: left;
+}
+
+.container {
+    width: 100%;
+    height: 100%;  
+    padding: 50px;
+    border: 1px solid #dbdbdb;
+    -webkit-box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.17);
+    -moz-box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.17);
+    box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.17);
+    position: relative;
+    
+}
+
+.container:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color:  aqua;
+    opacity: 0.05;
+}
+
+.fish {
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.fish-back,
+.catfish-back  {
+    position: absolute;
+    transform: scale(-1, 1);
+    transition: all 0.5s;
+}
+
+.catfish {
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.fish-dead {
+    animation: fishdies 1s, fishdisapears 5s ease-in 1s;
+    animation-fill-mode: forwards;
+    top: -40px !important;
+    transition: top 3s ease-in;
+}
+
+@-webkit-keyframes fishdies {
+    from { transform: none;}
+    to {transform: scale(1, -1);}
+}
+
+@keyframes fishdies {
+   from { transform: none;}
+    to {transform: scale(1, -1);}
+}
+
+@-webkit-keyframes fishdisapears {
+    from { opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fishdisapears {
+    from { opacity: 1;}
+    to {opacity: 0;}
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 3;
+}
+
+.modal {
+    color: #FFF;
+    text-align: center;
+    width: 50%;
+    height: 35%;
+    min-height: 280px;
+    margin: auto;
+    padding: 50px 70px;
+    background: #77a8a8; 
+    border: solid 5px  #3c5d5d; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.rules-container {
+    width: 100%;
+    font-size: 17px;
+    color: #283e3e;
+    padding: 0 30px 50px 30px;
+}
+
+.rules-list {
+    width: 87%;
+    background-color: beige;
+    padding: 20px;
+    float: right;
+}
+
+.rule {
+    padding-bottom: 13px;
+}
+
+
+
+@media (max-width: 1100px) {
+    .btn-pic {
+        display: none;
+    }
+
+    .btn {
+        font-size: 24px;
+    }
+
+    .btn span {
+        display: block;
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        -webkit-transform: rotate(-90deg); /* Safari */
+        transform: rotate(-90deg);
+    }
+
+}
